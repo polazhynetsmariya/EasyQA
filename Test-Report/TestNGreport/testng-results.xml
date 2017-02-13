@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="105088" started-at="2017-02-10T15:05:18Z" finished-at="2017-02-10T15:07:03Z">
+    <groups>
+    </groups>
+    <test name="Nopackage" duration-ms="105088" started-at="2017-02-10T15:05:18Z" finished-at="2017-02-10T15:07:03Z">
+      <class name="tests.LoginLogoutTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="SetUp" is-config="true" duration-ms="15763" started-at="2017-02-10T17:05:18Z" finished-at="2017-02-10T17:05:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="loginEmpty()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="loginEmpty" duration-ms="18841" started-at="2017-02-10T17:05:34Z" finished-at="2017-02-10T17:05:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginEmpty -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="tearDown" is-config="true" duration-ms="2454" started-at="2017-02-10T17:05:53Z" finished-at="2017-02-10T17:05:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="SetUp" is-config="true" duration-ms="4577" started-at="2017-02-10T17:05:55Z" finished-at="2017-02-10T17:06:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="loginNegativeTest()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="loginNegativeTest" duration-ms="16985" started-at="2017-02-10T17:06:00Z" finished-at="2017-02-10T17:06:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginNegativeTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="tearDown" is-config="true" duration-ms="1206" started-at="2017-02-10T17:06:17Z" finished-at="2017-02-10T17:06:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="SetUp" is-config="true" duration-ms="4631" started-at="2017-02-10T17:06:18Z" finished-at="2017-02-10T17:06:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="loginPositiveTest()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="loginPositiveTest" duration-ms="9865" started-at="2017-02-10T17:06:23Z" finished-at="2017-02-10T17:06:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPositiveTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="tearDown" is-config="true" duration-ms="1402" started-at="2017-02-10T17:06:33Z" finished-at="2017-02-10T17:06:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="SetUp" is-config="true" duration-ms="4815" started-at="2017-02-10T17:06:34Z" finished-at="2017-02-10T17:06:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="logoutTest()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="logoutTest" duration-ms="23168" started-at="2017-02-10T17:06:39Z" finished-at="2017-02-10T17:07:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LoginLogoutTest@4b19b8ae]" name="tearDown" is-config="true" duration-ms="1191" started-at="2017-02-10T17:07:02Z" finished-at="2017-02-10T17:07:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginLogoutTest -->
+    </test> <!-- Nopackage -->
+  </suite> <!-- Suite1 -->
+</testng-results>
