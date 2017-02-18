@@ -1,10 +1,8 @@
 package tests;
 
-import methods.LoginLogoutPage;
+import pages.LoginLogoutPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import static org.testng.Assert.assertTrue;
 import org.testng.annotations.*;
 

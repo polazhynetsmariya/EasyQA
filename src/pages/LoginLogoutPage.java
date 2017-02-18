@@ -1,10 +1,8 @@
-package methods;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class LoginLogoutPage {
     public WebElement userName;
@@ -12,6 +10,7 @@ public class LoginLogoutPage {
     public WebElement loginButton;
     public String login;
     public String pass;
+
 
     public void login(WebDriver driver, String _login, String _password){
         String baseUrl = "https://app.geteasyqa.com";
