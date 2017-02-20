@@ -11,9 +11,9 @@ import static org.hamcrest.Matchers.contains;
  */
 public class MyOrganizationsPage {
     public void FindAndOpenOrganization(WebDriver driver, String _organization_title) {
-        List<WebElement> organization = (List<WebElement>) ((JavascriptExecutor) driver).executeScript("return $('a:contains(" + _organization_title + ")').first()");
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", organization.get(0));
-        organization.get(0).click();
+//        List<WebElement> organization = (List<WebElement>) ((JavascriptExecutor) driver).executeScript("return $('a:contains(" + _organization_title + ")').first()");
+//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", organization.get(0));
+//        organization.get(0).click();
     }
     public void ClickAddOrganization(WebDriver driver) {
         driver.findElement(By.linkText("Add organization")).click();
