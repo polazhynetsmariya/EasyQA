@@ -89,6 +89,7 @@ public class AddOrganizationTest extends BaseTest {
         String _organization_title = UUID.randomUUID().toString();
         String _NewOrganizationTitle = _organization_title + "!";
         dp.ClickAddOrganization(driver);
+        Thread.sleep(2000);
         ao.CreateOrganization(driver, _organization_title);
         Thread.sleep(2000);
         mop.FindAndOpenOrganization(driver,_organization_title);
@@ -104,7 +105,6 @@ public class AddOrganizationTest extends BaseTest {
     @Test
     public void CreateNewOrganizationButtonTest() throws InterruptedException {
         mop.CreateNewOrganization(driver);
-        Thread.sleep(2000);
         ao.CreateOrganization(driver, _organization_title);
         Thread.sleep(2000);
         assertTrue(driver.findElement(By.linkText("Sparkd")).isDisplayed(), "Organization wasn't created");
