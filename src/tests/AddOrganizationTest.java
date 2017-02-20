@@ -7,6 +7,8 @@ import pages.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import java.util.UUID;
+
 import static org.testng.Assert.assertTrue;
 
 /**
@@ -68,5 +70,44 @@ public class AddOrganizationTest extends BaseTest {
         Thread.sleep(2000);
         WebElement errorMessageElement = driver.findElement(By.cssSelector(".message"));
         assertTrue(errorMessageElement.getText().equals(errorMessage), "unexpected error message was displayed");
+    }
+
+    @Test
+    public void OrganizationNameLenghtTest() throws InterruptedException {
+        _organization_title = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        String errorMessage = "is too long (maximum is 150 characters)";
+        dp.ClickAddOrganization(driver);
+        Thread.sleep(2000);
+        ao.CreateOrganization(driver, _organization_title);
+        Thread.sleep(2000);
+        WebElement errorMessageElement = driver.findElement(By.cssSelector(".message"));
+        assertTrue(errorMessageElement.getText().equals(errorMessage), "unexpected error message was displayed");
+    }
+
+    @Test
+    public void ChangeOrganizationTitleTest() throws InterruptedException {
+        String _organization_title = UUID.randomUUID().toString();
+        String _NewOrganizationTitle = _organization_title + "!";
+        dp.ClickAddOrganization(driver);
+        Thread.sleep(2000);
+        ao.CreateOrganization(driver, _organization_title);
+        Thread.sleep(2000);
+        mop.FindAndOpenOrganization(driver,_organization_title);
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(".card-header-btn")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("#organization_title")).sendKeys("!");
+        driver.findElement(By.cssSelector("[value='Save changes']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.linkText(_NewOrganizationTitle)).click();
+    }
+
+    @Test
+    public void CreateNewOrganizationButtonTest() throws InterruptedException {
+        mop.CreateNewOrganization(driver);
+        Thread.sleep(2000);
+        ao.CreateOrganization(driver, _organization_title);
+        Thread.sleep(2000);
+        assertTrue(driver.findElement(By.linkText("Sparkd")).isDisplayed(), "Organization wasn't created");
     }
 }
