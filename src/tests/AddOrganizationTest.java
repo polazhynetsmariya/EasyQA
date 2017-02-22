@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
@@ -7,6 +8,7 @@ import pages.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.UUID;
 
 import static org.testng.Assert.assertTrue;
@@ -16,9 +18,11 @@ import static org.testng.Assert.assertTrue;
  */
 public class AddOrganizationTest extends BaseTest {
     String _organization_title = "Sparkd";
+    String _project_title = "Astreya";
     DashboardPage dp = new DashboardPage();
     MyOrganizationsPage mop = new MyOrganizationsPage();
     AddOrganizationPage ao = new AddOrganizationPage();
+    OrganizationPage op = new OrganizationPage();
 
     @BeforeMethod
     public void DeleteOrganization() throws InterruptedException {
@@ -109,5 +113,19 @@ public class AddOrganizationTest extends BaseTest {
         ao.CreateOrganization(driver, _organization_title);
         Thread.sleep(2000);
         assertTrue(driver.findElement(By.linkText("Sparkd")).isDisplayed(), "Organization wasn't created");
+    }
+
+    @Test
+    public void AddProjectToOrganizationTest () throws InterruptedException {
+        dp.ClickAddOrganization(driver);
+        Thread.sleep(2000);
+        ao.CreateOrganization(driver,_organization_title);
+        Thread.sleep(2000);
+        mop.FindAndOpenOrganization(driver,_organization_title );
+        Thread.sleep(5000);
+        op.AddProjectToOrganization(driver,_project_title, _organization_title );
+        Thread.sleep(2000);
+        List<WebElement> project  = (List<WebElement>) ((JavascriptExecutor) driver).executeScript("return $('.project-name:contains(" + _project_title + ")')");
+        assertTrue(project.get(0).getText().equals(_project_title), "Project wasn't created");
     }
 }
